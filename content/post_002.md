@@ -12,9 +12,14 @@ Github Issues and Projects. It is like Jira, but more limited. Will it convince 
 using a TODO.md document? Maybe.
 
 I also reviewed all my repos, deleted junk repos and forks I don't care about. I added
-all my repos to lists, e.g. "My Best Repos" so that I could find them. I noticed many
-repos were text oriented, so I revived my idea of writing a build script for markdown + English.
-In otherwords, doing the things that wordprocessors do, spellcheck, format, grammar check, but
+all my repos to lists, e.g. "My Best Repos" so that I could find them. I noticed that
+Github allows pinning repos but not lists and not gists.
+
+I started adding Github actions to all my repos that I care about and got passing builds
+on about half dozen.
+
+I noticed many repos were text oriented, so I revived my idea of writing a build script for markdown + English.
+In other words, doing the things that word-processors do, spellcheck, format, grammar check, but
 doing so with the tools of software development.
 
 I went the Reston library and got some books. Feels like old times.
