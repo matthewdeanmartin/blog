@@ -1,5 +1,5 @@
 #!/bin/bash
-# set -euxo pipefail
+
 bash --version
 
 # Set tool locations
@@ -17,8 +17,12 @@ echo "Linting markdown files with alex"
 npx alex
 # "$ALEx"
 
+set -euo pipefail
 echo "Linting markdown files with markdownlint"
-"$MARKDOWNLINT" ./**/*.md --ignore node_modules --ignore .git --ignore .idea
+for file in $FILES; do
+    echo "$MARKDOWNLINT" "$file" --ignore node_modules --ignore .git --ignore .idea
+    "$MARKDOWNLINT" "$file" --ignore node_modules --ignore .git --ignore .idea
+done
 
 echo "Checking links in markdown files with linkcheckMarkdown"
 

@@ -11,8 +11,6 @@
   // Pelican doesn't require H1 at top
   "MD041": false,
 
-  qadfassdf
-
   // Set Ordered list item prefix to "ordered" (use 1. 2. 3. not 1. 1. 1.)
   "MD029": { "style": "ordered" },
 

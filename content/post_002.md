@@ -9,7 +9,7 @@ Summary: Learning about Github Issues, Actions and writing a Markdown build scri
 
 All I did all weekend was Github hacking. First I invested a lot of time learning about
 Github Issues and Projects. It is like Jira, but more limited. Will it convince me to stop
-using a TODO.md document? Maybe.
+using a `TODO.md` document? Maybe.
 
 I also reviewed all my repos, deleted junk repos and forks I don't care about. I added
 all my repos to lists, e.g. "My Best Repos" so that I could find them. I noticed that
