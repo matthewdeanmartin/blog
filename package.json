@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "alex": "^11.0.0",
+    "markdownlint-cli": "^0.33.0",
+    "textlint": "^12.5.1",
+    "textlint-rule-ginger": "^2.2.1",
+    "write-good": "^1.0.8"
+  }
+}

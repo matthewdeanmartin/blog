@@ -7,6 +7,9 @@ name = "pypi"
 pelican = {extras = ["markdown"], version = "*"}
 
 [dev-packages]
+proselint = "*"
+mdformat = "*"
+linkcheckmd = "*"
 
 [requires]
 python_version = "3.7"

@@ -4,7 +4,7 @@ AUTHOR = 'Matthew Martin'
 SITENAME = "Matt's Blog"
 SITESUBTITLE = "Not sure what I'm doing yet"
 SITEURL = 'http://wakayos.com/blog'
-TIMEZONE="EST"
+TIMEZONE = "EST"
 
 # can be useful in development, but set to False when you're ready to publish
 RELATIVE_URLS = True
@@ -20,13 +20,13 @@ FEED_ALL_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/{slug}.rss.xml'
 
 LINKS = (
-#     ('Biologeek', 'http://biologeek.org'),
+    #     ('Biologeek', 'http://biologeek.org'),
 
-         )
+)
 
 SOCIAL = (
     ('twitter', 'http://twitter.com/mistersql'),
-     ('mastodon', 'http://mastodon.social/@mistersql'),
+    ('mastodon', 'http://mastodon.social/@mistersql'),
     ('github', 'http://github.com/matthewdeanmartin'),
 )
 
@@ -60,11 +60,11 @@ PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 # Hyde Theme
 
-BIO="I'm a tech lead for a DC Area contracting company. I write python and think a lot about build scripts."
-PROFILE_IMAGE="blue_face.jpg"
+BIO = "I'm a tech lead for a DC Area contracting company. I write python and think a lot about build scripts."
+PROFILE_IMAGE = "blue_face.jpg"
 today = datetime.date.today()
 year = today.year
-FOOTER_TEXT=f"(C) {year} Matthew Martin"
+FOOTER_TEXT = f"(C) {year} Matthew Martin"
 # COLOR_THEME - base colors for the theme, choose from 08 to 0f, refer to https://github.com/poole/hyde for details.
 # FONT_AWESOME_CSS - URL to get Font Awesome as CSS
 # FONT_AWESOME_JS - URL to get Font Awesome as Javascript

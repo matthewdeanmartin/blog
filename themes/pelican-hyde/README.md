@@ -4,11 +4,9 @@ The pelican-hyde is a [Pelican](https://github.com/getpelican) theme inspired on
 
 You can see a live demo [here](http://jvanz.github.io/)
 
-
 ![Screenshot](screenshot.png)
 
 Pull requests are welcome
-
 
 ## Settings
 
@@ -43,12 +41,10 @@ but is not compatible with Font Awesome v5 and later, so if you want to use
 Font Awesome v5+, setting `FONT_AWESOME_CSS` is not enough, you will also need
 to modify the templates.
 
-
 ## Authors
 
 - Original theme by [Mark Otto](https://github.com/mdo): <https://github.com/poole/hyde>
 - Ported to Pelican by [José Guilherme Vanz](https://github.com/jvanz)
-
 
 ## License
 
