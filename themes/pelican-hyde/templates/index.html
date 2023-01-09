@@ -11,7 +11,8 @@
 				<p>
 					{{ article.summary }}
 				</p>
-				<a class="read-more" href="{{ article.url }}">Continue reading »</a>
+				{{ article.content }}
+				<a class="read-more" href="{{ article.url }}">Read and Comment »</a>
 			</div>
 		{% endfor %}
 	</div>

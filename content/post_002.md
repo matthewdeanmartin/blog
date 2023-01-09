@@ -1,11 +1,11 @@
-Title: Does it work?
+Title: Hacking on the first weekend of January 2023
 Date: 2023-01-08
 Modified: 2023-01-08
 Tags: life
 Category: life
 Slug: what-i-did-today
 Authors: Matthew Martin
-Summary: Finishing up a weekend of hacking
+Summary: Learning about Github Issues, Actions and writing a Markdown build script.
 
 All I did all weekend was Github hacking. First I invested a lot of time learning about
 Github Issues and Projects. It is like Jira, but more limited. Will it convince me to stop
