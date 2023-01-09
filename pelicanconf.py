@@ -1,3 +1,5 @@
+import datetime
+
 AUTHOR = 'Matthew Martin'
 SITENAME = "Matt's Blog"
 SITESUBTITLE = "Not sure what I'm doing yet"
@@ -54,3 +56,16 @@ PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 # foobar will not be used, because it's not in caps. All configuration keys
 # have to be in caps
 # foobar = "barbaz"
+
+
+# Hyde Theme
+
+BIO="I'm a tech lead for a DC Area contracting company. I write python and think a lot about build scripts."
+PROFILE_IMAGE="blue_face.jpg"
+today = datetime.date.today()
+year = today.year
+FOOTER_TEXT=f"(C) {year} Matthew Martin"
+# COLOR_THEME - base colors for the theme, choose from 08 to 0f, refer to https://github.com/poole/hyde for details.
+# FONT_AWESOME_CSS - URL to get Font Awesome as CSS
+# FONT_AWESOME_JS - URL to get Font Awesome as Javascript
+# FONT_ACADEMICONS - set to True to fetch the Academicons font

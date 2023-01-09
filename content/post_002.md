@@ -1,6 +1,6 @@
 Title: Does it work?
-Date: 2010-01-08
-Modified: 2010-01-08
+Date: 2023-01-08
+Modified: 2023-01-08
 Tags: life
 Category: life
 Slug: what-i-did-today
