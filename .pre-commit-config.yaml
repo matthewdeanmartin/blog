@@ -1,0 +1,30 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      # -   id: end-of-file-fixer
+      - id: check-yaml
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.33.0
+    hooks:
+      - id: markdownlint
+        args: [ 'content/**/*.md', '--config', '.markdownlintrc', '--fix' ]
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.16  # Use the ref you want to point at
+    hooks:
+      - id: mdformat
+        # Optionally add plugins
+        additional_dependencies:
+          - mdformat-gfm
+          - mdformat-black
+#- repo: https://github.com/jackdewinter/pymarkdown
+#  rev: v0.9.8
+#  hooks:
+#    - id: pymarkdown
+#      pass_filenames: false
+#      args:
+#        - --config
+#        - pymarkdown_config.json
+#        - scan
+#        - .
+#        - ./docs

@@ -46,4 +46,3 @@ done
 #for file in $FILES; do
 #    npx textlint --rule textlint-rule-ginger "$file"
 #done
-

@@ -12,7 +12,22 @@ for file in $FILES; do
 done
 echo
 
-# Format the markdown files
-# skip node_modules
+echo
 echo "Formatting markdown files with mdformat"
+echo
 find . -type f -name "*.md" ! -path "./node_modules/*" | xargs mdformat
+
+echo
+echo "Are the links okay?"
+echo
+linkcheckMarkdown content
+
+echo
+echo "Precommit"
+echo
+pre-commit run --all-files
+
+echo
+echo "Does pelican like it?"
+echo 
+pelican content -s pelicanconf.py -t themes/pelican-hyde
