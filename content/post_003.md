@@ -17,6 +17,13 @@ I tried [python-minifier](https://github.com/dflook/python-minifier) but that di
 
 A while ago I tried to create a markdown build script. Markdown is such a weird thing. It is English, so it needs spellcheck, grammar check. It is a templating language so it can benefit from linting. It also an input to a lot of CMS's that all did different things to handle Markdowns limitations.
 
+Here is what I made:
+
+- [A build script](https://github.com/matthewdeanmartin/blog/blob/main/build.sh)
+- [A pre-commit script](https://github.com/matthewdeanmartin/blog/blob/main/.pre-commit-config.yaml)
+
+I also had the pre-commit hook call the build script adn the build commit call `pre-commit run` and wondered why it took forever.
+
 ## Running
 
 Also ran on the treadmill. With November, December, and January being an endless collage of some sort of common code, I'm still not at 100% like I was in the autumn.
