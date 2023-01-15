@@ -3,7 +3,7 @@ Date: 2023-01-15
 Modified: 2023-01-15
 Tags: life
 Category: life
-Slug: what-i-did-today
+Slug: chatgpt-markdown-running-jan-15
 Authors: Matthew Martin
 Summary: Whatever man, I don't know.
 
