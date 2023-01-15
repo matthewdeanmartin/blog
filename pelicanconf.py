@@ -3,7 +3,7 @@ import datetime
 AUTHOR = 'Matthew Martin'
 SITENAME = "Matt's Blog"
 SITESUBTITLE = "Not sure what I'm doing yet"
-SITEURL = 'http://wakayos.com/blog'
+SITEURL = 'http://blog.wakayos.com/'
 TIMEZONE = "EST"
 
 # can be useful in development, but set to False when you're ready to publish
