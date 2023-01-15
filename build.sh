@@ -1,5 +1,5 @@
 #!/bin/bash
-# set -euxo pipefail
+set -euo pipefail
 bash --version
 
 # Set tool locations
@@ -15,19 +15,22 @@ echo
 echo
 echo "Formatting markdown files with mdformat"
 echo
-find . -type f -name "*.md" ! -path "./node_modules/*" | xargs mdformat
+for file in $FILES; do
+    pipenv run mdformat "$file"
+done
+
 
 echo
 echo "Are the links okay?"
 echo
-linkcheckMarkdown content
+pipenv run linkcheckMarkdown content
 
-echo
-echo "Precommit"
-echo
-pre-commit run --all-files
+#echo
+#echo "Precommit"
+#echo
+# pre-commit run --all-files
 
 echo
 echo "Does pelican like it?"
 echo 
-pelican content -s pelicanconf.py -t themes/pelican-hyde
+pipenv run pelican content -s pelicanconf.py -t themes/pelican-hyde

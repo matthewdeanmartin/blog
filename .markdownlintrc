@@ -14,7 +14,8 @@
   // Set Ordered list item prefix to "ordered" (use 1. 2. 3. not 1. 1. 1.)
   "MD029": { "style": "ordered" },
 
-  "MD030": { "ul_multi": 3, "ol_multi": 2 },
+  ///list-marker-space - mdformat disagrees
+  "MD030": false,
 
   // Set list indent level to 4 which Python-Markdown requires
   "MD007": { "indent": 4 },
@@ -27,4 +28,5 @@
 
   // Allow inline HTML
   //"MD033": false
+
 }

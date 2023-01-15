@@ -1,4 +1,13 @@
 repos:
+  - repo: local
+    hooks:
+      - id: custom-build
+        name: custom-build
+        entry: bash -c 'source build.sh'
+        language: system
+        # types: [ python ]
+        pass_filenames: false
+        verbose: true
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
@@ -8,7 +17,8 @@ repos:
     rev: v0.33.0
     hooks:
       - id: markdownlint
-        args: [ 'content/**/*.md', '--config', '.markdownlintrc', '--fix' ]
+        # '--fix'
+        args: [ 'content/**/*.md', '--config', '.markdownlintrc']
   - repo: https://github.com/executablebooks/mdformat
     rev: 0.7.16  # Use the ref you want to point at
     hooks:
