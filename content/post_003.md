@@ -24,6 +24,10 @@ Here is what I made:
 
 I also had the pre-commit hook call the build script adn the build commit call `pre-commit run` and wondered why it took forever.
 
+And cloudflare fought with me until I wrote this script to deploy it.
+
+- [Cloudflare pages deploy](https://github.com/matthewdeanmartin/blog/blob/main/cloudflare.sh)
+
 ## Running
 
 Also ran on the treadmill. With November, December, and January being an endless collage of some sort of common code, I'm still not at 100% like I was in the autumn.
