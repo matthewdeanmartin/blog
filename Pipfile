@@ -10,6 +10,7 @@ pelican = {extras = ["markdown"], version = "*"}
 proselint = "*"
 mdformat = "*"
 linkcheckmd = "*"
+typing_extensions = "*"
 
 [requires]
 python_version = "3.7"
