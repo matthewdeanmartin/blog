@@ -1,4 +1,4 @@
-Title: Meta and stuff
+Title: Side projects
 Date: 2023-01-21
 Modified: 2023-01-21
 Tags: life
