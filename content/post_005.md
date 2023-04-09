@@ -5,7 +5,7 @@ Tags: life
 Category: life
 Slug: running-openai-side-project-shells
 Authors: Matthew Martin
-Summary: I'm traing for another half-marathon, learning prompt engineering and trying to switch to fish.
+Summary: I'm training for another half-marathon, learning prompt engineering and trying to switch to fish.
 
 ## Running
 
