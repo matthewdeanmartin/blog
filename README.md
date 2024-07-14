@@ -7,7 +7,7 @@ Matt's Pelican-based Life Blog.
 git clone.
 
 ```bash
-pipenv install --dev --skip-lock
+poetry install --with dev
 ```
 
 ## Usage
@@ -50,6 +50,8 @@ Environment variables: None
 ```
 
 Before the build command runs, it will detect Pipfile and try to run that.  It Can't install pipenv w/o lock file (runs pipenv in 2.7!!)
+
+I since switched to poetry, not sure if the above is still true.
 
 ```bash
 # Worked 1x, no longer

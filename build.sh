@@ -16,14 +16,14 @@ echo
 echo "Formatting markdown files with mdformat"
 echo
 for file in $FILES; do
-    pipenv run mdformat "$file"
+    poetry run mdformat "$file"
 done
 
 
 echo
 echo "Are the links okay?"
 echo
-pipenv run linkcheckMarkdown content
+poetry run linkcheckMarkdown content
 
 #echo
 #echo "Precommit"
@@ -33,4 +33,4 @@ pipenv run linkcheckMarkdown content
 echo
 echo "Does pelican like it?"
 echo 
-pipenv run pelican content -s pelicanconf.py -t themes/pelican-hyde
+poetry run pelican content -s pelicanconf.py -t themes/pelican-hyde
