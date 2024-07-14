@@ -37,6 +37,7 @@ documentation ="https://github.com/matthewdeanmartin/blog"
 # proselint is requiring <4
 python = "==3.7.*"
 pelican = {extras = ["markdown"], version = ">=4.8.0, <4.9.0"}
+typing_extensions = "*"
 # pre-commit = "*"
 
 
