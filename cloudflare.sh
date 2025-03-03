@@ -9,23 +9,25 @@ pip freeze
 echo
 # not used later on...
 #pip install pipenv poetry
-#which pipenv
-#which poetry
+which pipenv
+which poetry
 echo
 echo "Activate"
 echo
-. /opt/buildhome/repo/.venv/bin/activate
+# . /opt/buildhome/repo/.venv/bin/activate
 echo
 echo "Did we activate?"
 echo
-pip --version
-pip freeze
+poetry run pip --version
+poetry run pip freeze
 echo
 echo "Summon the pelican!!!"
 echo
-/opt/buildhome/repo/.venv/bin/pelican --version
-/opt/buildhome/repo/.venv/bin/pelican content -s pelicanconf.py -t themes/pelican-hyde
+#/opt/buildhome/repo/.venv/bin/pelican --version
+#/opt/buildhome/repo/.venv/bin/pelican content -s pelicanconf.py -t themes/pelican-hyde
 
+poetry run pelican --version
+poetry run pelican content -s pelicanconf.py -t themes/pelican-hyde
 
 
 # Get the Bash version
