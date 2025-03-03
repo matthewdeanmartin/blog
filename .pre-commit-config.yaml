@@ -3,7 +3,7 @@ repos:
     hooks:
       - id: custom-build
         name: custom-build
-        entry: bash -c 'source build.sh'
+        entry: bash -c '. build.sh'
         language: system
         # types: [ python ]
         pass_filenames: false

@@ -14,7 +14,7 @@ echo
 echo
 echo "Activate"
 echo
-source /opt/buildhome/repo/.venv/bin/activate
+. /opt/buildhome/repo/.venv/bin/activate
 echo
 echo "Did we activate?"
 echo
