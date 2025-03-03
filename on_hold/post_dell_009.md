@@ -23,9 +23,10 @@ I want to use it for
 
 - TODO lists.
 - Notes. Maybe I can use it a place to record stuff I've read online
-- Project tracking, espcially side projects
+- Project tracking, especially side projects
 
 If I can write the code to make it happen:
+
 - Import starred github projects as "TODO" items or projects
 - Import bookmarked mastodon posts as "TODO" items
 

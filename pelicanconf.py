@@ -60,7 +60,7 @@ PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 # Hyde Theme
 
-BIO = "I'm a tech lead for a DC Area contracting company. I write python and think a lot about build scripts."
+BIO = "I'm a devops developer for a DC Area contracting company. I write python, terraform and think a lot about build scripts."
 PROFILE_IMAGE = "blue_face.jpg"
 today = datetime.date.today()
 year = today.year

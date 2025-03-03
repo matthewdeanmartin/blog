@@ -61,7 +61,7 @@ module.exports = {
 
 If I imported `import jest from 'jest';` I got error messages about jest not having certain properties. So I removed the import altogether and it worked! Astonishing.
 
-I also ran into a problem where the mocks failed to have the right properties.  The error message: `Cannot read properties of undefined (reading 'readJsonSync')`
+I also ran into a problem where the mocks failed to have the right properties. The error message: `Cannot read properties of undefined (reading 'readJsonSync')`
 
 The solution, put this into `tsconfig.json`:
 

@@ -49,7 +49,7 @@ Root directory: /
 Environment variables: None
 ```
 
-Before the build command runs, it will detect Pipfile and try to run that.  It Can't install pipenv w/o lock file (runs pipenv in 2.7!!)
+Before the build command runs, it will detect Pipfile and try to run that. It Can't install pipenv w/o lock file (runs pipenv in 2.7!!)
 
 I since switched to poetry, not sure if the above is still true.
 
