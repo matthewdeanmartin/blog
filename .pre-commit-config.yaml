@@ -9,18 +9,18 @@ repos:
         pass_filenames: false
         verbose: true
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v6.0.0
     hooks:
       # -   id: end-of-file-fixer
       - id: check-yaml
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.33.0
+    rev: v0.45.0
     hooks:
       - id: markdownlint
         # '--fix'
         args: [ 'content/**/*.md', '--config', '.markdownlintrc']
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.16  # Use the ref you want to point at
+    rev: 0.7.22  # Use the ref you want to point at
     hooks:
       - id: mdformat
         # Optionally add plugins
