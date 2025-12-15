@@ -10,6 +10,7 @@ Summary: How should I set up a personal AWS Account securely?
 # How should I set up a personal AWS Account securely?
 
 Topics to hit:
+
 - Tooling
   - Granted
   - Two factor auth
@@ -17,4 +18,3 @@ Topics to hit:
   - Organizations
   - Cloud custodian
   - Multiple accounts
-
