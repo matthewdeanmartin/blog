@@ -20,7 +20,7 @@ include = [
 ]
 exclude = [
 ]
-license = "MIT"
+license = "N/A"
 readme = "README.md"
 repository = "https://github.com/matthewdeanmartin/blog"
 homepage = "https://github.com/matthewdeanmartin/blog"

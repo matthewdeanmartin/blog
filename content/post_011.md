@@ -12,8 +12,8 @@ Summary: Can a mediocre vegan runner match an omnivore professional?
 Well, not yet. Here is my theory why:
 
 - I need about 5 years of serious running to build up to it
-- I'm starting around age 48-49, currently 50, so I'm doing this in difficult mode, as compared to if I'd started 
-when I was 35
+- I'm starting around age 48-49, currently 50, so I'm doing this in difficult mode, as compared to if I'd started
+  when I was 35
 
 My marathon times to date are definitely mediocre.
 

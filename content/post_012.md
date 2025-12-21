@@ -63,4 +63,3 @@ Tagging is a particular pain. There are at least 3+ ways projects need to be cat
 It is on my wishlist to make this generic enough to publish on pypi.
 
 It will probably end up being github centric and python centric because of the pypi integration.
-
