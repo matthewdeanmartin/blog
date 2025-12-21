@@ -1,6 +1,6 @@
 Title: Creating a Portfolio Website
-Date: 2023-12-20
-Modified: 2023-12-20
+Date: 2025-12-20
+Modified: 2025-12-20
 Tags: programming
 Category: programming
 Slug: creating-a-portfolio-website
