@@ -2,6 +2,7 @@
 echo "Gather Info"
 which python
 python --version
+which uv
 echo
 which pip
 pip --version
