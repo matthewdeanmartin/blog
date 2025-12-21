@@ -11,7 +11,7 @@ Summary: Creating a Portfolio Website
 
 I think people (like me) might want to have a personal website for 3 reasons:
 
-- Job hunting. "I need a job, you need a "
+- Job hunting. "I need a job, you need a techie"
 - An Identity site. "This is who I am"
 - Project promotion. "Look at this thing I did."
 

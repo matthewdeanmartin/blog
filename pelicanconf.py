@@ -25,7 +25,7 @@ LINKS = (
 )
 
 SOCIAL = (
-    ('pypi', 'https://pypi.org/user/matthewdeanmartin/'),
+    ('python', 'https://pypi.org/user/matthewdeanmartin/'),
     ('mastodon', 'http://mastodon.social/@mistersql'),
     ('github', 'http://github.com/matthewdeanmartin'),
 )
