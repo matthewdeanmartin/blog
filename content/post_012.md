@@ -7,7 +7,7 @@ Slug: creating-a-portfolio-website
 Authors: Matthew Martin
 Summary: Creating a Portfolio Website
 
-# Creating a Portfolio Website
+## How many ways to create a home page?
 
 I think people (like me) might want to have a personal website for 3 reasons:
 
