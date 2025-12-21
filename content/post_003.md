@@ -1,8 +1,8 @@
 Title: Meta and stuff
 Date: 2023-01-15
 Modified: 2023-01-15
-Tags: life
-Category: life
+Tags: devlog
+Category: devlog
 Slug: chatgpt-markdown-running-jan-15
 Authors: Matthew Martin
 Summary: Whatever man, I don't know.
@@ -27,9 +27,3 @@ I also had the pre-commit hook call the build script adn the build commit call `
 And cloudflare fought with me until I wrote this script to deploy it.
 
 - [Cloudflare pages deploy](https://github.com/matthewdeanmartin/blog/blob/main/cloudflare.sh)
-
-## Running
-
-Also ran on the treadmill. With November, December, and January being an endless collage of some sort of common code, I'm still not at 100% like I was in the autumn.
-
-Kids went to swimming lessons yesterday, so not a lot of activies. I'm trying to catch up on that today.

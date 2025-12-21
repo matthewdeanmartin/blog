@@ -3,3 +3,6 @@ build:
 
 format:
 	mdformat content
+
+source:
+	./scripts/make_source.sh

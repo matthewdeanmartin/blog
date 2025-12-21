@@ -9,13 +9,18 @@ Summary: I'm training for another half-marathon, learning prompt engineering and
 
 ## Running
 
-Last December, I ran my 1/2 marathon, got a mild case of extensor tendonitis (self diagnosed) and then the holidays and side projects took over. So I ran between 5 and 7 miles per week most weeks. This week I'm back to 21+ miles per week.
+Last December, I ran my 1/2 marathon, got a mild case of extensor tendonitis (self diagnosed) and then the holidays and
+side projects took over. So I ran between 5 and 7 miles per week most weeks. This week I'm back to 21+ miles per week.
 
-I got a half-marathon coming up fast, in 7 weeks, so I figure I need to ramp up to 6 miles a day. That means the running I do over the next 3 weeks has the most impact, if it takes 4 weeks for training to have an impact. Last time I did a surge of training, I did daily split sessions and strength training most days.
+I got a half-marathon coming up fast, in 7 weeks, so I figure I need to ramp up to 6 miles a day. That means the running
+I do over the next 3 weeks has the most impact, if it takes 4 weeks for training to have an impact. Last time I did a
+surge of training, I did daily split sessions and strength training most days.
 
 ## Side Projects
 
-My most successful side project has been [cheaper_openai](https://github.com/matthewdeanmartin/cheaper_openai) which I created when I heard they might charge $42 a month. The lower price came out and I cancelled my satellite radio and signed up. Which should you use? Assistant (ChatGPT) is for hard questions, coding. Davinci is for experiments where:
+My most successful side project has been [cheaper_openai](https://github.com/matthewdeanmartin/cheaper_openai) which I
+created when I heard they might charge $42 a month. The lower price came out and I cancelled my satellite radio and
+signed up. Which should you use? Assistant (ChatGPT) is for hard questions, coding. Davinci is for experiments where:
 
 - having a machine make many similar request would help, e.g. trying to get a funny joke
 - having code compile the response would help, e.g. book writing
@@ -25,7 +30,9 @@ Otherwise, most of the time, Assistant is smarter.
 
 ## The rabbit-hole of shells
 
-The `sh` and `bash` shell are both annoying, brain-damaged programming languages. I tried to get Davinci to generate a whole book on `fish` and `powershell` shell programming as well as how to do shell-programming-like tasks using `python` with mixed results.
+The `sh` and `bash` shell are both annoying, brain-damaged programming languages. I tried to get Davinci to generate a
+whole book on `fish` and `powershell` shell programming as well as how to do shell-programming-like tasks using `python`
+with mixed results.
 
 Optimal shell workflow (which I haven't achieved myself)
 

@@ -1,8 +1,8 @@
 Title: Hacking on the first weekend of January 2023
 Date: 2023-01-08
 Modified: 2023-01-08
-Tags: life
-Category: life
+Tags: devlog
+Category: devlog
 Slug: what-i-did-today
 Authors: Matthew Martin
 Summary: Learning about Github Issues, Actions and writing a Markdown build script.
@@ -21,5 +21,3 @@ on about half dozen.
 I noticed many repos were text oriented, so I revived my idea of writing a build script for markdown + English.
 In other words, doing the things that word-processors do, spellcheck, format, grammar check, but
 doing so with the tools of software development.
-
-I went the Reston library and got some books. Feels like old times.

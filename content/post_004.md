@@ -1,8 +1,8 @@
 Title: Side projects
 Date: 2023-01-21
 Modified: 2023-01-21
-Tags: life
-Category: life
+Tags: devlog
+Category: devlog
 Slug: docker-on-gitlab-polyrepos-chatgpt
 Authors: Matthew Martin
 Summary: Github and ChatGPT experiments, learning about mono and polyrepos

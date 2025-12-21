@@ -81,3 +81,8 @@ FOOTER_TEXT = f"(C) {year} Matthew Martin"
 # FONT_AWESOME_CSS - URL to get Font Awesome as CSS
 # FONT_AWESOME_JS - URL to get Font Awesome as Javascript
 # FONT_ACADEMICONS - set to True to fetch the Academicons font
+
+MENUITEMS = (
+    ('Categories', 'categories.html'),
+    ('Tag Map', 'tags.html'),
+)

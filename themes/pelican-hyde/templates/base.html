@@ -48,9 +48,36 @@
 
 	<body class="theme-base-{{ COLOR_THEME if COLOR_THEME else '0d' }}">
 		{% include 'sidebar.html' %}
-		<div class="content container">
-			{% block content %}
-			{% endblock %}
-		</div>
+{#		<div class="content container">#}
+{#			{% block content %}#}
+{#			{% endblock %}#}
+{#		</div>#}
+    <div class="content container">
+{#          {% if tags %}#}
+{#          <div class="top-tag-menu">#}
+{#             <span class="tag-menu-label">Topics:</span>#}
+{#             {% for tag, articles in tags|sort %}#}
+{#                <a href="{{ SITEURL }}/{{ tag.url }}" class="tag-menu-item">{{ tag }}</a>#}
+{#             {% endfor %}#}
+{#          </div>#}
+{#          {% endif %}#}
+    {% if categories %}
+          <div class="top-category-menu">
+             <span class="category-menu-label">Categories:</span>
+             {% for cat, articles in categories|sort %}
+                <a href="{{ SITEURL }}/{{ cat.url }}"
+                   class="category-menu-item {% if category and category == cat %}active{% endif %}">
+                   {{ cat }}
+                </a>
+             {% endfor %}
+{#             <span class="separator">|</span>#}
+{#             <a href="{{ SITEURL }}/categories.html" class="category-menu-item" style="font-style: italic;">All Categories</a>#}
+          </div>
+          {% endif %}
+
+
+          {% block content %}
+          {% endblock %}
+       </div>
 	</body>
 </html>

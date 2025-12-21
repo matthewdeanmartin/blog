@@ -288,3 +288,35 @@ a.sidebar-social-item.active:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+/* Tag menu */
+/* Custom Tag Menu */
+.top-tag-menu {
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+    padding-bottom: 0.1rem;
+    margin-bottom: 0.1rem;
+
+  /*padding-bottom: 1.5rem;*/
+  /*  margin-bottom: 2rem;*/
+
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 1.6;
+}
+
+.tag-menu-label {
+    font-weight: bold;
+    color: #555;
+    margin-right: 0.5rem;
+}
+
+.tag-menu-item {
+    display: inline-block;
+    margin-right: 0.75rem;
+    white-space: nowrap;
+    color: #268bd2; /* Matches Poole link color */
+}
+
+.tag-menu-item:hover {
+    text-decoration: underline;
+}
