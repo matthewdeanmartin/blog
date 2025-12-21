@@ -51,14 +51,6 @@ typing_extensions = "*"
 # pre-commit = "*"
 
 
-[tool.poetry.dev-dependencies]
-
-# proselint = "*"
-#mdformat = "*"
-#linkcheckmd = "*"
-# typing_extensions = "*"
-
-
 [tool.black]
 line-length = 120
 target-version = ['py39']

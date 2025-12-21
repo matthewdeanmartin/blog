@@ -2,7 +2,7 @@ import datetime
 
 AUTHOR = 'Matthew Martin'
 SITENAME = "Matt's Blog"
-SITESUBTITLE = "Not sure what I'm doing yet"
+SITESUBTITLE = "Developer, Devops Guy in a Govtech World"
 SITEURL = 'http://blog.wakayos.com'
 TIMEZONE = "EST"
 
@@ -19,9 +19,21 @@ DEFAULT_PAGINATION = 4
 FEED_ALL_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/{slug}.rss.xml'
 
-LINKS = (
-    #     ('Biologeek', 'http://biologeek.org'),
+DEVOPS_LINKS = (
+       ('', ''),
+)
 
+LINKS = (
+       ('Dan Hon', 'https://newsletter.danhon.com/'),
+       ('Alex Howard','https://civic-texts.ghost.io/'),
+       ('Jennifer Pahlka', 'https://www.eatingpolicy.com/'),
+       ('Joshua Tauberer','https://joshuatauberer.medium.com/'),
+       ('Waldo Jaquith', 'https://waldo.jaquith.org/'),
+       ('Hana Schank','https://hanaschank.com/essays/'),
+       ('Marina Nitze','https://www.hackyourbureaucracy.com/'),
+       ('Dave Guarino', 'https://daveguarino.substack.com/'),
+       ('Cyd Harrell','https://cydharrell.wpcomstaging.com/writing/'),
+       ('Mark Headd','https://civic.io/')
 )
 
 SOCIAL = (

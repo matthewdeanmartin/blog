@@ -26,6 +26,7 @@
 			{% endif %}
 			</ul>
 		{% endif %}
+
 		<nav class="sidebar-social">
 			{% for name, link in SOCIAL %}
 				{% if name == 'email' %}
@@ -53,6 +54,18 @@
 				<i class="fa fa-rss"></i>
 			</a>
 		</nav>
+
+        {% if LINKS  %}
+            <h3 class="sidebar-blogroll">Civic/Govtech Blogs</h3>
+			<ul class="sidebar-nav">
+			{% if LINKS %}
+				{% for title, url in LINKS %}
+					<li><a href="{{ url }}">{{ title }}</a></li>
+				{% endfor %}
+			{% endif %}
+			</ul>
+		{% endif %}
+
 		{% if FOOTER_TEXT %}
 			<p class="sidebar-footer">{{ FOOTER_TEXT }}</p>
 		{% endif %}
