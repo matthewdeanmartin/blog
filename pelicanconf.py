@@ -24,16 +24,16 @@ DEVOPS_LINKS = (
 )
 
 LINKS = (
-       ('Dan Hon', 'https://newsletter.danhon.com/'),
-       ('Alex Howard','https://civic-texts.ghost.io/'),
-       ('Jennifer Pahlka', 'https://www.eatingpolicy.com/'),
-       ('Joshua Tauberer','https://joshuatauberer.medium.com/'),
-       ('Waldo Jaquith', 'https://waldo.jaquith.org/'),
-       ('Hana Schank','https://hanaschank.com/essays/'),
-       ('Marina Nitze','https://www.hackyourbureaucracy.com/'),
-       ('Dave Guarino', 'https://daveguarino.substack.com/'),
-       ('Cyd Harrell','https://cydharrell.wpcomstaging.com/writing/'),
-       ('Mark Headd','https://civic.io/')
+       # ('Dan Hon', 'https://newsletter.danhon.com/'),
+       # ('Alex Howard','https://civic-texts.ghost.io/'),
+       # ('Jennifer Pahlka', 'https://www.eatingpolicy.com/'),
+       # ('Joshua Tauberer','https://joshuatauberer.medium.com/'),
+       # ('Waldo Jaquith', 'https://waldo.jaquith.org/'),
+       # ('Hana Schank','https://hanaschank.com/essays/'),
+       # ('Marina Nitze','https://www.hackyourbureaucracy.com/'),
+       # ('Dave Guarino', 'https://daveguarino.substack.com/'),
+       # ('Cyd Harrell','https://cydharrell.wpcomstaging.com/writing/'),
+       # ('Mark Headd','https://civic.io/')
 )
 
 SOCIAL = (
