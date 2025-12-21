@@ -1,20 +1,27 @@
+---
+ci:
+  autoupdate_schedule: monthly
+  autofix_commit_msg: |
+    [pre-commit.ci] Apply automatic pre-commit fixes
+  skip: []
+
 repos:
-  - repo: local
-    hooks:
-      - id: custom-build
-        name: custom-build
-        entry: bash -c '. build.sh'
-        language: system
-        # types: [ python ]
-        pass_filenames: false
-        verbose: true
+#  - repo: local
+#    hooks:
+#      - id: custom-build
+#        name: custom-build
+#        entry: bash -c '. build.sh'
+#        language: system
+#        # types: [ python ]
+#        pass_filenames: false
+#        verbose: true
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
       # -   id: end-of-file-fixer
       - id: check-yaml
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.46.0
+    rev: v0.47.0
     hooks:
       - id: markdownlint
         # '--fix'
