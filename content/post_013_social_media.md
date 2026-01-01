@@ -57,9 +57,11 @@ kind of like how google use to be your front door to the web that took you place
 
 ### First draft
 
-Anyhow, this is my first draft, "Mastohuman" https://github.com/matthewdeanmartin/mastohuman
+Anyhow, this is my first draft, "
+Mastohuman" [https://github.com/matthewdeanmartin/mastohuman](https://github.com/matthewdeanmartin/mastohuman)
 
-I don't like the name and the LLM didn't really get my vision.
+I don't like the name and the LLM didn't really get my vision. But that's not the point of this blog post, I'm thinking
+aloud about what the final product should look like.
 
 But I like the trajectory of this project and if I could switch to a "finite feed", that would really improve my quality
 of life.
