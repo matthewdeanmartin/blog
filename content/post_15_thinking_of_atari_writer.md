@@ -7,7 +7,7 @@ Slug: thinking-of-atari-writer
 Authors: Matthew Martin
 Summary: Where I have fond memories of AtariWriter
 
-# Choosing a side project:
+# AtariWriter is like a time machine
 
 My first job doing computer work was for my Mom, who worked at a
 doctors office. They didn't have the means to easily send out dunning
