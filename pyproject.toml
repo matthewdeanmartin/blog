@@ -4,6 +4,7 @@ requires-python = ">=3.13"
 version = "0.1.0"
 description = "Matt's blog"
 readme = "README.md"
+license = { text = "All rights reserved." }
 authors = [
     { name = "Matthew Martin", email = "matthewdeanmartin@gmail.com" },
 ]
@@ -11,7 +12,6 @@ keywords = ["blog"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3.13",
@@ -28,3 +28,10 @@ dependencies = [
 
 [tool.uv]
 package = false
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []
