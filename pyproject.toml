@@ -3,8 +3,9 @@ name = "blog"
 requires-python = ">=3.13"
 version = "0.1.0"
 dependencies = [
+    "pelican-sitemap>=1.2.2",
     "pelican[markdown]>=4.8.0",
-    "typing_extensions"
+    "typing_extensions",
 ]
 
 [tool.poetry]
@@ -46,6 +47,7 @@ package-mode = false
 [tool.poetry.dependencies]
 python = ">=3.13,<4.0"
 pelican = { extras = ["markdown"], version = ">=4.8.0, <4.9.0" }
+pelican-sitemap = ">=1.2.2"
 typing_extensions = "*"
 # pre-commit = "*"
 

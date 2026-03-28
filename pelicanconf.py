@@ -3,8 +3,8 @@ import datetime
 AUTHOR = 'Matthew Martin'
 SITENAME = "Matt's Blog"
 SITESUBTITLE = "Developer, Devops Guy in a Govtech World"
-SITEURL = 'http://blog.wakayos.com'
-TIMEZONE = "EST"
+SITEURL = "https://blog.wakayos.com"
+TIMEZONE = "America/New_York"
 
 # can be useful in development, but set to False when you're ready to publish
 RELATIVE_URLS = True
@@ -16,12 +16,11 @@ REVERSE_CATEGORY_ORDER = True
 DEFAULT_PAGINATION = 4
 # DEFAULT_DATE = (2012, 3, 2, 14, 1, 1)
 
-FEED_ALL_RSS = 'feeds/all.rss.xml'
-CATEGORY_FEED_RSS = 'feeds/{slug}.rss.xml'
-
-DEVOPS_LINKS = (
-       ('', ''),
-)
+FEED_DOMAIN = SITEURL
+FEED_ALL_ATOM = "feeds/all.atom.xml"
+FEED_ALL_RSS = "feeds/all.rss.xml"
+CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
+CATEGORY_FEED_RSS = "feeds/{slug}.rss.xml"
 
 LINKS = (
        # ('Dan Hon', 'https://newsletter.danhon.com/'),
@@ -46,15 +45,16 @@ SOCIAL = (
 # DEFAULT_METADATA = {'yeah': 'it is'}
 
 # path-specific metadata
-# EXTRA_PATH_METADATA = {
-#     'extra/robots.txt': {'path': 'robots.txt'},
-#     }
+EXTRA_PATH_METADATA = {
+    "extra/robots.txt": {"path": "robots.txt"},
+    "extra/favicon.svg": {"path": "favicon.svg"},
+}
 
 # static paths will be copied without parsing their contents
-# STATIC_PATHS = [
-#     'images',
-#     'extra/robots.txt',
-#     ]
+STATIC_PATHS = [
+    "images",
+    "extra",
+]
 
 # custom page generated with a jinja2 template
 # TEMPLATE_PAGES = {'pages/jinja2_template.html': 'jinja2_template.html'}
@@ -62,8 +62,20 @@ SOCIAL = (
 # there is no other HTML content
 READERS = {'html': None}
 
-# code blocks with line numbers
-PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
+PLUGINS = ["sitemap"]
+SITEMAP = {
+    "format": "xml",
+    "priorities": {
+        "articles": 0.5,
+        "indexes": 0.5,
+        "pages": 0.5,
+    },
+    "changefreqs": {
+        "articles": "monthly",
+        "indexes": "daily",
+        "pages": "monthly",
+    },
+}
 
 # foobar will not be used, because it's not in caps. All configuration keys
 # have to be in caps
@@ -74,6 +86,7 @@ PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 BIO = "I'm a devops developer for a DC Area contracting company. I write python, terraform and think a lot about build scripts."
 PROFILE_IMAGE = "blue_face.jpg"
+FAVICON = "favicon.svg"
 today = datetime.date.today()
 year = today.year
 FOOTER_TEXT = f"(C) {year} Matthew Martin"

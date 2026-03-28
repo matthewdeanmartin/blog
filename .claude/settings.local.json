@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.py$|\\\\.toml$|\\\\.yaml$|\\\\.yml$\")",
+      "Bash(find /c/github/blog -maxdepth 2 -type d -name *plugin* -o -name *spec*)"
+    ]
+  }
+}

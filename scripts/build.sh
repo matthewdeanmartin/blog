@@ -1,12 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 bash --version
 
-# Set tool locations
-TIDY="node_modules/.bin/tidy-markdown"
-
 echo "Working with these files"
-FILES=$(find . -type f -name "*.md" ! -path "./node_modules/*")
+FILES=$(find ./content -type f -name "*.md")
 for file in $FILES; do
     echo "$file"
 done
@@ -16,14 +13,14 @@ echo
 echo "Formatting markdown files with mdformat"
 echo
 for file in $FILES; do
-    poetry run mdformat "$file"
+    mdformat "$file"
 done
 
 
 echo
 echo "Are the links okay?"
 echo
-poetry run linkcheckMarkdown content
+linkcheckMarkdown content
 
 #echo
 #echo "Precommit"
@@ -33,4 +30,4 @@ poetry run linkcheckMarkdown content
 echo
 echo "Does pelican like it?"
 echo 
-poetry run pelican content -s pelicanconf.py -t themes/pelican-hyde
+uv run pelican content -s pelicanconf.py -t themes/pelican-hyde --fatal errors

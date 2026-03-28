@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 bash --version
 
@@ -17,10 +18,8 @@ echo "Linting markdown files with alex"
 npx alex
 # "$ALEx"
 
-set -euo pipefail
 echo "Linting markdown files with markdownlint"
 for file in $FILES; do
-    echo "$MARKDOWNLINT" "$file" --ignore node_modules --ignore .git --ignore .idea
     "$MARKDOWNLINT" "$file" --ignore node_modules --ignore .git --ignore .idea
 done
 

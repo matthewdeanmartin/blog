@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
+
 export THEME=themes/pelican-hyde
-# poetry run pelican content -s pelicanconf.py -t $THEME
-uv run pelican content -s pelicanconf.py -t $THEME
-start output/index.html
+uv run pelican content -s pelicanconf.py -t "$THEME" --fatal errors

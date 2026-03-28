@@ -1,17 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
+
 echo "Gather Info"
-which python
+command -v python
 python --version
-which uv
+command -v uv
 echo
-which pip
-pip --version
-pip freeze
+command -v pip || true
+python -m pip --version
+python -m pip freeze
 echo
 # not used later on...
 #pip install pipenv poetry
-which pipenv
-which poetry
+command -v pipenv || true
+command -v poetry || true
 echo
 echo "Activate"
 echo
@@ -19,16 +21,16 @@ echo
 echo
 echo "Did we activate?"
 echo
-poetry run pip --version
-poetry run pip freeze
+uv run python -m pip --version
+uv run python -m pip freeze
 echo
 echo "Summon the pelican!!!"
 echo
 #/opt/buildhome/repo/.venv/bin/pelican --version
 #/opt/buildhome/repo/.venv/bin/pelican content -s pelicanconf.py -t themes/pelican-hyde
 
-poetry run pelican --version
-poetry run pelican content -s pelicanconf.py -t themes/pelican-hyde
+uv run pelican --version
+uv run pelican content -s publishconf.py -t themes/pelican-hyde --fatal errors
 
 
 # Get the Bash version
