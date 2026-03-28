@@ -51,7 +51,7 @@ Root directory: /
 Environment variables: None
 ```
 
-`cloudflare.sh` keeps that sourced entrypoint and now prefers `uv` when available, but falls back to `poetry`, an activated `.venv`, or `python -m pelican` so it stays compatible with Cloudflare's environment quirks.
+`cloudflare.sh` keeps that sourced entrypoint, assumes the build command has already `cd`'d into the repo root, prints extra shell diagnostics, bootstraps `uv` with `pip --user` if needed, runs `uv sync`, and then builds with `uv run pelican`.
 
 Production builds use [publishconf.py](publishconf.py) via [cloudflare.sh](cloudflare.sh), so generated URLs, feeds, sitemap output, and output cleanup still use production settings without changing the Cloudflare Pages contract.
 

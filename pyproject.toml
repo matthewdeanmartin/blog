@@ -2,18 +2,12 @@
 name = "blog"
 requires-python = ">=3.13"
 version = "0.1.0"
-dependencies = [
-    "pelican-sitemap>=1.2.2",
-    "pelican[markdown]>=4.8.0",
-    "typing_extensions",
-]
-
-[tool.poetry]
-name = "matts-blog"
-version = "1.0.0"
 description = "Matt's blog"
-authors = ["Matthew Martin <matthewdeanmartin@gmail.com>"]
-keywords = ["blog", ]
+readme = "README.md"
+authors = [
+    { name = "Matthew Martin", email = "matthewdeanmartin@gmail.com" },
+]
+keywords = ["blog"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
@@ -22,35 +16,15 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3.13",
 ]
-include = [
-    "content/**/*.*",
-    "themes/**/*.*",
-    "content/**/*",
-    "themes/**/*"
+dependencies = [
+    "pelican-sitemap>=1.2.2",
+    "pelican[markdown]>=4.8.0",
+    "typing_extensions",
 ]
-exclude = [
-]
-license = "N/A"
-readme = "README.md"
-repository = "https://github.com/matthewdeanmartin/blog"
-homepage = "https://github.com/matthewdeanmartin/blog"
-documentation = "https://github.com/matthewdeanmartin/blog"
-package-mode = false
 
-[tool.poetry.urls]
+[project.urls]
 "Bug Tracker" = "https://github.com/matthewdeanmartin/blog/issues"
 "Change Log" = "https://github.com/matthewdeanmartin/blog/blob/main/CHANGES.md"
 
-[tool.poetry.scripts]
-
-
-[tool.poetry.dependencies]
-python = ">=3.13,<4.0"
-pelican = { extras = ["markdown"], version = ">=4.8.0, <4.9.0" }
-pelican-sitemap = ">=1.2.2"
-typing_extensions = "*"
-# pre-commit = "*"
-
-#[build-system]
-#requires = ["poetry>=0.12"]
-#build-backend = "poetry.masonry.api"
+[tool.uv]
+package = false
