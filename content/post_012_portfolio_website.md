@@ -5,7 +5,7 @@ Tags: programming
 Category: programming
 Slug: creating-a-portfolio-website
 Authors: Matthew Martin
-Summary: 
+Summary:
 
 ## How many ways to create a home page?
 
