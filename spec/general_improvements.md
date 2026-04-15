@@ -2,7 +2,7 @@
 
 Generated: 2026-03-28
 
----
+______________________________________________________________________
 
 ## 1. Pelican Features Not Being Used
 
@@ -11,13 +11,14 @@ Generated: 2026-03-28
 **Problem:** `pelicanconf.py` has `RELATIVE_URLS = True` and `SITEURL = 'http://...'`. Pelican's convention is a `publishconf.py` that imports from `pelicanconf.py` and overrides settings for production (absolute URLs, no relative URLs, feed settings). Currently the site is always built with relative URLs, which means the RSS feeds will have broken links in production.
 
 **Fix:** Create `publishconf.py`:
+
 ```python
 from pelicanconf import *
 
-SITEURL = 'https://blog.wakayos.com'   # note https
+SITEURL = "https://blog.wakayos.com"  # note https
 RELATIVE_URLS = False
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-FEED_ALL_RSS = 'feeds/all.rss.xml'
+FEED_ALL_ATOM = "feeds/all.atom.xml"
+FEED_ALL_RSS = "feeds/all.rss.xml"
 DELETE_OUTPUT_DIRECTORY = True
 ```
 
@@ -41,13 +42,15 @@ This can cause incorrect article timestamps and warnings from Pelican.
 **Problem:** The `STATIC_PATHS` and `EXTRA_PATH_METADATA` block is commented out. Without `STATIC_PATHS = ['images']`, Pelican may not reliably copy the images directory to output. It works incidentally because images are referenced from content, but this is fragile.
 
 **Fix:** Uncomment and configure:
+
 ```python
-STATIC_PATHS = ['images', 'extra']
+STATIC_PATHS = ["images", "extra"]
 EXTRA_PATH_METADATA = {
-    'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.ico': {'path': 'favicon.ico'},
+    "extra/robots.txt": {"path": "robots.txt"},
+    "extra/favicon.ico": {"path": "favicon.ico"},
 }
 ```
+
 Also create `content/extra/robots.txt` with basic content.
 
 ### 1.5 Atom feeds not configured
@@ -55,9 +58,10 @@ Also create `content/extra/robots.txt` with basic content.
 **Problem:** Only RSS feeds are configured (`FEED_ALL_RSS`, `CATEGORY_FEED_RSS`). Pelican supports Atom feeds natively (`FEED_ALL_ATOM`, `CATEGORY_FEED_ATOM`), which are preferred by many feed readers and aggregators. The theme's `feeds.html` fragment likely supports both.
 
 **Fix:** Add to `pelicanconf.py` (dev) and `publishconf.py` (prod):
+
 ```python
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
+FEED_ALL_ATOM = "feeds/all.atom.xml"
+CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 ```
 
 ### 1.6 `PYGMENTS_RST_OPTIONS` used but content is Markdown
@@ -66,17 +70,18 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 **Fix (option A):** Remove the dead config line.
 **Fix (option B):** Add `MARKDOWN` extension config to enable line numbers for Markdown code blocks:
+
 ```python
 MARKDOWN = {
-    'extension_configs': {
-        'markdown.extensions.codehilite': {
-            'css_class': 'highlight',
-            'linenums': False,   # or True if you want line numbers
+    "extension_configs": {
+        "markdown.extensions.codehilite": {
+            "css_class": "highlight",
+            "linenums": False,  # or True if you want line numbers
         },
-        'markdown.extensions.extra': {},
-        'markdown.extensions.meta': {},
+        "markdown.extensions.extra": {},
+        "markdown.extensions.meta": {},
     },
-    'output_format': 'html5',
+    "output_format": "html5",
 }
 ```
 
@@ -98,11 +103,13 @@ MARKDOWN = {
 **Problem:** No `robots.txt` in output means crawlers get the default "allow all" (fine) but there's no `Sitemap:` directive pointing to the sitemap. No favicon means browsers show a broken icon.
 
 **Fix:** Add `content/extra/robots.txt`:
+
 ```
 User-agent: *
 Disallow:
 Sitemap: https://blog.wakayos.com/sitemap.xml
 ```
+
 Add a `favicon.ico` or `favicon.png` to `content/extra/`.
 Update `STATIC_PATHS` and `EXTRA_PATH_METADATA` as in 1.4.
 
@@ -111,20 +118,13 @@ Update `STATIC_PATHS` and `EXTRA_PATH_METADATA` as in 1.4.
 **Problem:** Pelican has a built-in `sitemap` plugin (part of `pelican-plugins` or the standalone `pelican-sitemap` package) that generates `sitemap.xml`. This helps search engines crawl the blog. Currently not configured.
 
 **Fix:** Add `pelican-sitemap` to `pyproject.toml` and configure:
+
 ```python
-PLUGINS = ['sitemap']
+PLUGINS = ["sitemap"]
 SITEMAP = {
-    'format': 'xml',
-    'priorities': {
-        'articles': 0.5,
-        'indexes': 0.5,
-        'pages': 0.5
-    },
-    'changefreqs': {
-        'articles': 'monthly',
-        'indexes': 'daily',
-        'pages': 'monthly'
-    }
+    "format": "xml",
+    "priorities": {"articles": 0.5, "indexes": 0.5, "pages": 0.5},
+    "changefreqs": {"articles": "monthly", "indexes": "daily", "pages": "monthly"},
 }
 ```
 
@@ -134,7 +134,7 @@ SITEMAP = {
 
 **Fix:** Either configure it with a GA4 measurement ID, or delete the fragment if not needed.
 
----
+______________________________________________________________________
 
 ## 2. Makefile / Scripts — QA Checks to Add
 
@@ -143,6 +143,7 @@ SITEMAP = {
 **Problem:** `scripts/reports.sh` exists with alex, markdownlint, linkcheckMarkdown, proselint, and write-good, but the Makefile has no target to invoke it. Running QA requires knowing about the script directly.
 
 **Fix:** Add to `Makefile`:
+
 ```makefile
 check:
 	./scripts/reports.sh
@@ -161,6 +162,7 @@ report: check
 **Problem:** `find . -type f -name "*.md" ! -path "./node_modules/*"` in `build.sh` picks up draft files. This means `mdformat` reformats drafts (fine) but `linkcheckMarkdown` checks links in drafts that may intentionally have placeholder or broken links.
 
 **Fix:** Narrow the find to `./content` only for link checks, matching what `go.sh` builds:
+
 ```bash
 CONTENT_FILES=$(find ./content -type f -name "*.md")
 ```
@@ -182,10 +184,12 @@ CONTENT_FILES=$(find ./content -type f -name "*.md")
 **Problem:** The `output/` directory accumulates stale files when articles are renamed or deleted. Pelican has a `DELETE_OUTPUT_DIRECTORY` setting but it's not set. No `make clean` exists.
 
 **Fix:** Add to `Makefile`:
+
 ```makefile
 clean:
 	rm -rf output/
 ```
+
 And set `DELETE_OUTPUT_DIRECTORY = True` in `publishconf.py`.
 
 ### 2.7 `go.sh` uses `start` (Windows-only) to open browser
@@ -200,6 +204,7 @@ And set `DELETE_OUTPUT_DIRECTORY = True` in `publishconf.py`.
 **Problem:** Deployment is done via `cloudflare.sh` but there's no Makefile target for it. Adding it would make the workflow more discoverable.
 
 **Fix:** Add to `Makefile`:
+
 ```makefile
 deploy:
 	./cloudflare.sh
@@ -216,11 +221,12 @@ deploy:
 **Problem:** Pelican by default continues building even with warnings (missing metadata, etc.). In CI, it's better to fail on errors. The `--fatal errors` flag makes Pelican exit non-zero on errors.
 
 **Fix:** Add `--fatal errors` to the pelican invocation in `go.sh` and `cloudflare.sh`:
+
 ```bash
 uv run pelican content -s pelicanconf.py -t $THEME --fatal errors
 ```
 
----
+______________________________________________________________________
 
 ## 3. Orphaned / Misplaced File
 
@@ -230,32 +236,32 @@ uv run pelican content -s pelicanconf.py -t $THEME --fatal errors
 
 **Fix:** Move to `draft/post_014_habit_math.md` or `content/` as appropriate.
 
----
+______________________________________________________________________
 
 ## 4. Priority Order
 
-| Priority | Item | Effort | Impact |
-|----------|------|--------|--------|
-| High | 1.2 Fix SITEURL to HTTPS | Trivial | SEO/security |
-| High | 1.3 Fix TIMEZONE to valid IANA name | Trivial | Correctness |
-| High | 2.4 Move `set -euo pipefail` to top of reports.sh | Trivial | Bug fix |
-| High | 2.5 Remove spurious echo in reports.sh | Trivial | Bug fix |
-| High | 3.1 Move orphaned root-level md file | Trivial | Cleanliness |
-| Medium | 1.1 Add publishconf.py | Small | Correctness |
-| Medium | 1.5 Add Atom feeds | Small | Discoverability |
-| Medium | 1.4 Configure STATIC_PATHS | Small | Correctness |
-| Medium | 1.6 Remove/fix PYGMENTS_RST_OPTIONS | Small | Cleanliness |
-| Medium | 1.7 Remove dead DEVOPS_LINKS | Trivial | Cleanliness |
-| Medium | 2.1 Add `make check` target | Trivial | DX |
-| Medium | 2.2 Align build.sh to use uv | Small | Consistency |
-| Medium | 2.3 Narrow find to content/ in build.sh | Small | Correctness |
-| Medium | 2.6 Add `make clean` target | Trivial | DX |
-| Medium | 2.7 Guard/remove `start` in go.sh | Trivial | Portability |
-| Low | 1.8 Clean up LINKS comments | Trivial | Cleanliness |
-| Low | 1.9 Add robots.txt + favicon | Medium | Polish |
-| Low | 1.10 Add sitemap plugin | Medium | SEO |
-| Low | 1.11 Remove/use GA template fragment | Trivial | Cleanliness |
-| Low | 2.8 Add `make deploy` target | Trivial | DX |
-| Low | 2.9 Update cloudflare.sh to use uv | Small | Correctness |
-| Low | 2.10 Add --fatal errors to pelican | Trivial | CI quality |
-| Low | 1.6b Configure MARKDOWN extensions | Small | Feature |
+| Priority | Item                                              | Effort  | Impact          |
+| -------- | ------------------------------------------------- | ------- | --------------- |
+| High     | 1.2 Fix SITEURL to HTTPS                          | Trivial | SEO/security    |
+| High     | 1.3 Fix TIMEZONE to valid IANA name               | Trivial | Correctness     |
+| High     | 2.4 Move `set -euo pipefail` to top of reports.sh | Trivial | Bug fix         |
+| High     | 2.5 Remove spurious echo in reports.sh            | Trivial | Bug fix         |
+| High     | 3.1 Move orphaned root-level md file              | Trivial | Cleanliness     |
+| Medium   | 1.1 Add publishconf.py                            | Small   | Correctness     |
+| Medium   | 1.5 Add Atom feeds                                | Small   | Discoverability |
+| Medium   | 1.4 Configure STATIC_PATHS                        | Small   | Correctness     |
+| Medium   | 1.6 Remove/fix PYGMENTS_RST_OPTIONS               | Small   | Cleanliness     |
+| Medium   | 1.7 Remove dead DEVOPS_LINKS                      | Trivial | Cleanliness     |
+| Medium   | 2.1 Add `make check` target                       | Trivial | DX              |
+| Medium   | 2.2 Align build.sh to use uv                      | Small   | Consistency     |
+| Medium   | 2.3 Narrow find to content/ in build.sh           | Small   | Correctness     |
+| Medium   | 2.6 Add `make clean` target                       | Trivial | DX              |
+| Medium   | 2.7 Guard/remove `start` in go.sh                 | Trivial | Portability     |
+| Low      | 1.8 Clean up LINKS comments                       | Trivial | Cleanliness     |
+| Low      | 1.9 Add robots.txt + favicon                      | Medium  | Polish          |
+| Low      | 1.10 Add sitemap plugin                           | Medium  | SEO             |
+| Low      | 1.11 Remove/use GA template fragment              | Trivial | Cleanliness     |
+| Low      | 2.8 Add `make deploy` target                      | Trivial | DX              |
+| Low      | 2.9 Update cloudflare.sh to use uv                | Small   | Correctness     |
+| Low      | 2.10 Add --fatal errors to pelican                | Trivial | CI quality      |
+| Low      | 1.6b Configure MARKDOWN extensions                | Small   | Feature         |
