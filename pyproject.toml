@@ -28,6 +28,7 @@ dependencies = [
 
 [tool.uv]
 package = false
+universal = true
 
 [build-system]
 requires = ["setuptools>=77"]
