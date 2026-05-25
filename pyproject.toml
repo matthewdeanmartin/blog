@@ -28,8 +28,9 @@ dependencies = [
 
 [tool.uv]
 package = false
-universal = true
 
+[tool.uv.pip]
+universal = true
 [build-system]
 requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
