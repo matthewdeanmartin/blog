@@ -37,3 +37,6 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 py-modules = []
+
+[tool.ruff.lint]
+ignore = ["RUF100"]  # unused noqa differs across Python versions
